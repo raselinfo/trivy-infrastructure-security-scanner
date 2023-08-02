@@ -16,6 +16,7 @@ jobs:
       - name: Build image from Dockerfile
         run: |
           docker build -t node-image:v1 .
+        run: docker ps
       
       - name: Run trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
