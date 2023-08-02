@@ -13,6 +13,9 @@ severity: CRITICAL,HIGH,MEDIUM,LOW
 paths:
 - ./
 
+security_checks:
+- secret
+
 # The regular expressions that match secrets.
 secrets:
 - /[a-zA-Z0-9]{8,}/
