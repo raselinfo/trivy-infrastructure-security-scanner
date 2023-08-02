@@ -1,1 +1,1 @@
-const password="12345678"
+const password = '235wfage6eteyt'
