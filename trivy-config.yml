@@ -14,9 +14,9 @@ paths:
 - ./
 
 # The regular expressions that match secrets.
-# secrets:
-# - /[a-zA-Z0-9]{8,}/
-# - /[a-zA-Z0-9]{32,}/
+secrets:
+- /[a-zA-Z0-9]{8,}/
+- /[a-zA-Z0-9]{32,}/
 
 # The types of secrets to report.
 secret_types:
@@ -24,3 +24,6 @@ secret_types:
 - api_key
 - secret_key
 - token
+
+exclude:
+- secrets.txt
