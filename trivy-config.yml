@@ -1,3 +1,19 @@
+# This file configures Trivy to check JavaScript code for exposed secrets.
+
+# The format of the output report.
 format: json
+
+# The exit code to return if vulnerabilities are found.
 exit-code: 1
+
+# The severity levels of vulnerabilities to report.
 severity: CRITICAL,HIGH,MEDIUM,LOW,UNKNOWN
+
+# The paths to the JavaScript files to scan.
+paths:
+- ./*.js
+
+# The regular expressions that match secrets.
+secrets:
+- /[a-zA-Z0-9]{8,}/
+- /[a-zA-Z0-9]{32,}/
