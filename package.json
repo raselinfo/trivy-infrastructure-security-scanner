@@ -1,0 +1,16 @@
+{
+  "name": "trivy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@raselinfo:raselinfo/trivy-infrastructure-security-scanner.git",
+  "author": "raselinfo <raselinfo52@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
