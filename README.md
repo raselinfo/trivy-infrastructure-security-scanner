@@ -1,0 +1,1 @@
+# trivy-infrastructure-security-scanner
