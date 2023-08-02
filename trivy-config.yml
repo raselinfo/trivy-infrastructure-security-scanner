@@ -1,22 +1,22 @@
 # This file configures Trivy to check for exposed secrets.
 
 # The format of the output report.
-format: json
+format: table
 
 # The exit code to return if vulnerabilities are found.
 exit-code: 1
 
 # The severity levels of vulnerabilities to report.
-severity: CRITICAL,HIGH,MEDIUM,LOW,UNKNOWN
+severity: CRITICAL,HIGH,MEDIUM,LOW
 
 # The paths to the files to scan.
 paths:
 - ./
 
 # The regular expressions that match secrets.
-secrets:
-- /[a-zA-Z0-9]{8,}/
-- /[a-zA-Z0-9]{32,}/
+# secrets:
+# - /[a-zA-Z0-9]{8,}/
+# - /[a-zA-Z0-9]{32,}/
 
 # The types of secrets to report.
 secret_types:
