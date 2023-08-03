@@ -13,23 +13,20 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       
-      # - name: Build image from Dockerfile
-      #   run: |
-      #     docker build -t node-image:v1 . && docker images -a
+      - name: Build image from Dockerfile
+        run: |
+          docker build -t node-image:v1 . && docker images -a
         
       
-      # - name: Run trivy vulnerability scanner for Docker Image
-      #   uses: aquasecurity/trivy-action@master
-      #   with: 
-      #     image-ref: node-image:v1
-      #     # format: 'table'
-      #     format: 'json'
-      #     exit-code: '1'
-      #     ignore-unfixed: true
-      #     vuln-type: 'os,library'
-      #     severity: 'CRITICAL,HIGH'
-      - name: Run Trivy vulnerability scanner in fs mode
+      - name: Run trivy vulnerability scanner for Docker Image
         uses: aquasecurity/trivy-action@master
-        with:
-          trivy-config: trivy-config.yml
-      
+        with: 
+          image-ref: node-image:v1
+          # format: 'table'
+          format: 'sarif'
+          output: 'trivy-results.sarif
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH,MEDIUM,LOW'
+    
