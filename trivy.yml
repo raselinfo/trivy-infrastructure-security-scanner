@@ -21,7 +21,7 @@ secret_types:
 
 
 ignore-unfixed: true
-vuln-type: os,library
+vuln-type: os,library,secret
 skip-update: false
 skip-refresh: false
 # timeout: 300
