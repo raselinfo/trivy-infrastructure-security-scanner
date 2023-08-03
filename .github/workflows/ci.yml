@@ -24,7 +24,6 @@ jobs:
         with: 
           image-ref: node-image:v1
           trivy-config: trivy.yml
-          scanners: vuln,secret,config
           
     
       - name: Upload Trivy scan results to GitHub Security tab

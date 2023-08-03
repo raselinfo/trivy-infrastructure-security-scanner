@@ -4,8 +4,24 @@ format: sarif
 output: trivy-results.sarif
 exit-code: 1
 severity: CRITICAL,HIGH
+# images:
+# - node-image:v1
+
+paths:
+- ./
+secrets:
+- /[a-zA-Z0-9]{8,}/
+- /[a-zA-Z0-9]{32,}/
+
+secret_types:
+- password
+- api_key
+- secret_key
+- token
+
 
 ignore-unfixed: true
 vuln-type: os,library,secret
 secret-config: trivy-secret.yml
+
 
