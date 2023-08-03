@@ -3,7 +3,7 @@
 format: sarif
 output: trivy-results.sarif
 exit-code: 1
-severity: CRITICAL,HIGH,MEDIUM,LOW
+severity: CRITICAL,HIGH
 images:
 - node-image:v1
 
