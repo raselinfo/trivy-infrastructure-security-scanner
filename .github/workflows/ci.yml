@@ -22,14 +22,7 @@ jobs:
       - name: Run trivy vulnerability scanner for Docker Image
         uses: aquasecurity/trivy-action@master
         with: 
-          exit-code: '1'
-          # image-ref: node-image:v1
-          # # format: 'table'
-          # format: 'sarif'
-          # output: 'trivy-results.sarif'
-          # ignore-unfixed: true
-          # vuln-type: 'os,library'
-          # severity: 'CRITICAL,HIGH,MEDIUM,LOW'
+          image-ref: node-image:v1
           trivy-config: trivy.yml
     
       - name: Upload Trivy scan results to GitHub Security tab

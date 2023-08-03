@@ -4,8 +4,8 @@ format: sarif
 output: trivy-results.sarif
 exit-code: 1
 severity: CRITICAL,HIGH
-images:
-- node-image:v1
+# images:
+# - node-image:v1
 
 paths:
 - ./
@@ -22,7 +22,7 @@ secret_types:
 
 ignore-unfixed: true
 vuln-type: os,library
-# skip-update: false
-# skip-refresh: false
-# # timeout: 300
-# debug: true
+skip-update: false
+skip-refresh: false
+# timeout: 300
+debug: true
