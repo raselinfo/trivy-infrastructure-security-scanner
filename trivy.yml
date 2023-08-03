@@ -5,7 +5,7 @@ output: trivy-results.sarif
 exit-code: 1
 severity: CRITICAL,HIGH
 
-
 ignore-unfixed: true
 vuln-type: os,library,secret
+secret-config: trivy-secret.yml
 
