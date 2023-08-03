@@ -13,9 +13,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       
-      - name: Build image from Dockerfile
-        run: |
-          docker build -t node-image:v1 . && docker images -a
+      # - name: Build image from Dockerfile
+      #   run: |
+      #     docker build -t node-image:v1 . && docker images -a
         
       
       # - name: Run trivy vulnerability scanner for Docker Image
