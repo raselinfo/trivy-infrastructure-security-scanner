@@ -24,7 +24,7 @@ jobs:
           image-ref: node-image:v1
           # format: 'table'
           format: 'sarif'
-          output: 'trivy-results.sarif
+          output: 'trivy-results.sarif'
           exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
