@@ -17,8 +17,7 @@ secret_types:
 - secret_key
 - token
 
-db: trivy.db
-cache: .trivy/cache
+
 ignore-unfixed: false
 skip-update: false
 skip-refresh: false
