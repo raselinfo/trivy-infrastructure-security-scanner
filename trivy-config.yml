@@ -1,32 +1,26 @@
-# This file configures Trivy to check for exposed secrets.
+# This file configures Trivy.
 
-# The format of the output report.
-format: table
-
-# The exit code to return if vulnerabilities are found.
+format: sarif
+output: trivy-results.sarif
 exit-code: 1
-
-# The severity levels of vulnerabilities to report.
 severity: CRITICAL,HIGH,MEDIUM,LOW
-
-# The paths to the files to scan.
+images:
+- node-image:v1
 paths:
 - ./
-
-security_checks:
-- secret
-
-# The regular expressions that match secrets.
 secrets:
 - /[a-zA-Z0-9]{8,}/
 - /[a-zA-Z0-9]{32,}/
-
-# The types of secrets to report.
 secret_types:
 - password
 - api_key
 - secret_key
 - token
 
-exclude:
-- secrets.txt
+db: trivy.db
+cache: .trivy/cache
+ignore-unfixed: false
+skip-update: false
+skip-refresh: false
+timeout: 300
+debug: true
