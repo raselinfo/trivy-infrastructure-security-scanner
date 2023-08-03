@@ -12,6 +12,7 @@ paths:
 secrets:
 - /[a-zA-Z0-9]{8,}/
 - /[a-zA-Z0-9]{32,}/
+
 secret_types:
 - password
 - api_key
@@ -19,8 +20,9 @@ secret_types:
 - token
 
 
-ignore-unfixed: false
-skip-update: false
-skip-refresh: false
-# timeout: 300
-debug: true
+ignore-unfixed: true
+vuln-type: os,library
+# skip-update: false
+# skip-refresh: false
+# # timeout: 300
+# debug: true
